@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Base</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .box {
+            border: 2px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        .header-box {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-color: #f9f9f9;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .logo-box {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            background-color: #eee;
+        }
+        .attendance-box {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: #fafafa;
+        }
+        .calendar-box {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: #f5f5f5;
+        }
+        .slack-box {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            background-color: #f9f9f9;
+        }
+        .slack-box a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .group-box {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://app.slack.com/client/T05TJ6YUXUM/C05TEF86P46" target="_blank">Slack</a>
+            <a href="#">Calendar</a>
+            <a href="#">Attendance</a>
+            <a href="#">Groups</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="box header-box">
+            Welcome to Bootcamp Base! What are you looking for today?
+        </div>
+        <div class="box logo-box">
+            <!-- Logo goes here -->
+        </div>
+        <div class="box attendance-box">
+            Attendance Box
+        </div>
+        <div class="box calendar-box">
+            Calendar Box
+        </div>
+        <div class="box slack-box">
+            <a href="https://app.slack.com/client/T05TJ6YUXUM/C05TEF86P46" target="_blank">Go to Slack</a>
+        </div>
+        <div class="box group-box">
+            Groups Box
+        </div>
+    </div>
+</body>
+</html>
