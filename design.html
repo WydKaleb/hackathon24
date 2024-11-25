@@ -17,24 +17,29 @@
             width: 100%;
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            padding: 15px 0;
             display: flex;
             justify-content: center;
-        }
-        header nav {
-            display: flex;
             gap: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
         header a {
             text-decoration: none;
             color: white;
-            font-size: 1.2em;
+        }
+        .title-box {
+            text-align: center;
+            background-color: #f9f9f9;
+            width: 100%;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
         }
         .container {
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 20px;
             width: 80%;
             margin-top: 20px;
         }
@@ -43,31 +48,16 @@
             padding: 20px;
             text-align: center;
         }
-        .header-box {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            background-color: #f9f9f9;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
         .logo-box {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
             background-color: #eee;
         }
         .attendance-box {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
             background-color: #fafafa;
         }
         .calendar-box {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
             background-color: #f5f5f5;
         }
         .slack-box {
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
             background-color: #f9f9f9;
         }
         .slack-box a {
@@ -75,39 +65,47 @@
             text-decoration: none;
         }
         .group-box {
-            grid-column: 2 / 3;
-            grid-row: 3 / 4;
             background-color: lightblue;
         }
     </style>
 </head>
 <body>
+    <!-- Title Box -->
+    <div class="title-box">
+        Welcome to Bootcamp Base! What are you looking for today?
+    </div>
+
+    <!-- Header with navigation links -->
     <header>
-        <nav>
-            <a href="https://app.slack.com/client/T05TJ6YUXUM/C05TEF86P46" target="_blank">Slack</a>
-            <a href="#">Calendar</a>
-            <a href="#">Attendance</a>
-            <a href="#">Groups</a>
-        </nav>
+        <a href="https://app.slack.com/client/T05TJ6YUXUM/C05TEF86P46" target="_blank">Slack</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="groups.html">Groups</a>
     </header>
+
+    <!-- Main container for boxes -->
     <div class="container">
-        <div class="box header-box">
-            Welcome to Bootcamp Base! What are you looking for today?
-        </div>
+        <!-- Left Column Boxes -->
         <div class="box logo-box">
-            <!-- Logo goes here -->
+            <a href="https://appdevlogo.png" target="_blank">
+                <img src="appdevlogo.png" alt="AppDev Logo" style="width: 100%; height: auto;">
+            </a>
         </div>
         <div class="box attendance-box">
-            Attendance Box
-        </div>
-        <div class="box calendar-box">
-            Calendar Box
+            <a href="https://docs.google.com/spreadsheets/d/11KyhmaOcg3iTmB5mFtQciAnB7vI8udLRAkKF5isqCkM/edit?usp=sharing" target="_blank">Attendance</a>
         </div>
         <div class="box slack-box">
             <a href="https://app.slack.com/client/T05TJ6YUXUM/C05TEF86P46" target="_blank">Go to Slack</a>
         </div>
+
+        <!-- Right Column Boxes -->
+        <div class="box calendar-box">
+            <!-- Link to calendar page -->
+            <a href="calendar.html">Go to Calendar</a>
+        </div>
         <div class="box group-box">
-            Groups Box
+            <!-- Link to groups page -->
+            <a href="groups.html">Go to Groups</a>
         </div>
     </div>
 </body>
