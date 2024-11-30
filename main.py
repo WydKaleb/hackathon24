@@ -26,5 +26,7 @@ myCursor.execute("CREATE TABLE IF NOT EXISTS information(month, date, year, slid
 
 @app.get("/api/hw/{date}")
 def returnHomeworkAssignments(date: str):
+    
+    #HERE RETURN THE RESPECTIVE HW ASSIGNMENT BASED ON THE PASSED IN DATE
     return {"message": date}
 
