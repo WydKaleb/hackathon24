@@ -11,11 +11,17 @@
     <a href="../index.html">Back to Bootcamp Base</a>
     <br>
     <br>
-    <label>Select Date:</label>
+    <label for="datePicked">Select Date:</label>
     <input id="datePicked" type="date">
-    <button id="getInfo" onClick="getAssignments()"> Get Information </button>
+    <button id="getInfo" onClick="getAssignments()">Get Information</button>
+
+    <!-- Placeholder for assignment details -->
+    <div id="assignmentDetails" style="margin-top: 20px;">
+        <h3>Assignment Details:</h3>
+        <p id="slideshowLink">Slideshow Link: <span>No data yet.</span></p>
+        <p id="homeworkForm">Homework Form: <span>No data yet.</span></p>
+    </div>
 
     <script src="scripts/calendarScript.js"></script>
-
 </body>
 </html>

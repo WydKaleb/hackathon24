@@ -1,18 +1,39 @@
-const selectedDate = document.getElementById("datePicked")
+// Get the selected date input field and display elements
+const selectedDate = document.getElementById("datePicked");
+const slideshowLink = document.getElementById("slideshowLink").querySelector("span");
+const homeworkForm = document.getElementById("homeworkForm").querySelector("span");
 
-async function getAssignments(){
+// Function to fetch and display assignment details
+async function getAssignments() {
+    if (!selectedDate.value) {
+        alert("Please select a date.");
+        return;
+    }
 
-    //store url and pass in custom date for api request
-    const url = "http://127.0.0.1:8000/api/hw/"+selectedDate.value+"/"; 
+    // Backend API URL
+    const url = `http://127.0.0.1:8000/${selectedDate.value}`;
 
-    try{
-        //api call
-        const resp = await fetch(url);
-        const data = await resp.json();
-        //make sure date is correct
-        console.log(data.message);
+    try {
+        // API call
+        const response = await fetch(url);
+        const data = await response.json();
 
-    }catch(error){
-        console.error("error");
+        // Check for errors in the response
+        if (data.error) {
+            slideshowLink.textContent = "Error: " + data.error;
+            homeworkForm.textContent = "";
+        } else {
+            // Update the assignment details in the DOM
+            slideshowLink.innerHTML = data.slideshow_link
+                ? `<a href="${data.slideshow_link}" target="_blank">View Slideshow</a>`
+                : "No slideshow link available.";
+            homeworkForm.innerHTML = data.homework_form_link
+                ? `<a href="${data.homework_form_link}" target="_blank">View Homework Form</a>`
+                : "No homework form available.";
+        }
+    } catch (error) {
+        console.error("Error fetching assignments:", error);
+        slideshowLink.textContent = "Error fetching data.";
+        homeworkForm.textContent = "";
     }
 }
