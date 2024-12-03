@@ -1,3 +1,48 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3eaff; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navbar styles */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #007bff; /* Primary blue for main heading */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
 /* Styling for all groups and buttons */
 .mentor-groups {
     width: 80%;
@@ -5,6 +50,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* Individual group box */
 .group-box {
     display: flex;
     justify-content: space-between;
@@ -12,7 +58,7 @@
     border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -46,7 +92,7 @@
 }
 
 /* Styling for Add and Remove buttons */
-.add-button, .remove-button {
+.add-button, .remove-button, .remove-group-button {
     padding: 10px 15px;
     font-size: 0.9em;
     color: white;
@@ -63,12 +109,20 @@
     background-color: #dc3545;
 }
 
+.remove-group-button {
+    background-color: #ff8800;
+}
+
 .add-button:hover {
     background-color: #218838;
 }
 
 .remove-button:hover {
     background-color: #c82333;
+}
+
+.remove-group-button:hover {
+    background-color: #e06b00;
 }
 
 /* Styling for the "Create New Group" button */
@@ -89,4 +143,15 @@
 
 .create-group-button:hover {
     background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
 }

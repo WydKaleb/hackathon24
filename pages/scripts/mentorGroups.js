@@ -45,11 +45,18 @@ function displayGroups() {
         actionButtons.appendChild(addButton);
 
         // Button to remove a member
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('remove-button');
-        removeButton.innerText = 'Remove Member';
-        removeButton.addEventListener('click', () => removeMember(group.id));
-        actionButtons.appendChild(removeButton);
+        const removeMemberButton = document.createElement('button');
+        removeMemberButton.classList.add('remove-button');
+        removeMemberButton.innerText = 'Remove Member';
+        removeMemberButton.addEventListener('click', () => removeMember(group.id));
+        actionButtons.appendChild(removeMemberButton);
+
+        // Button to remove the entire group
+        const removeGroupButton = document.createElement('button');
+        removeGroupButton.classList.add('remove-group-button');
+        removeGroupButton.innerText = 'Remove Group';
+        removeGroupButton.addEventListener('click', () => removeGroup(group.id));
+        actionButtons.appendChild(removeGroupButton);
 
         // Appending everything to the group box
         groupBox.appendChild(groupInfo);
@@ -83,6 +90,18 @@ function removeMember(groupId) {
         if (group) {
             group.members = group.members.filter(member => member !== memberName); // Removing member
             displayGroups(); // Re-render groups with updated members
+        }
+    }
+}
+
+// Function to remove an entire group
+function removeGroup(groupId) {
+    const confirmDelete = confirm('Are you sure you want to remove this group?');
+    if (confirmDelete) {
+        const groupIndex = groups.findIndex(group => group.id === groupId);
+        if (groupIndex !== -1) {
+            groups.splice(groupIndex, 1); // Remove the group from the array
+            displayGroups(); // Re-render groups with the updated list
         }
     }
 }
