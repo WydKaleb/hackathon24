@@ -34,7 +34,7 @@ while start_date <= end_date:
     match date_str:
         case "2024-09-24":
             slideshow_link = "https://docs.google.com/presentation/d/1VP9mrEZJZ9ALk2dBwadcGkWBg5twjUbM6VFZ7Fn3Vkk/edit?usp=sharing"
-            homework_form = "There is no homework this week."
+            homework_form = None
         case "2024-10-01":
             slideshow_link = "https://docs.google.com/presentation/d/1wO047LhrT73QIcC5WzFhzGOtYhxap3aPq-nYbjmOSKk/edit?usp=sharing"
             homework_form = "https://forms.gle/FtfsBKiXwcuTmXLw7"
@@ -56,10 +56,10 @@ while start_date <= end_date:
             homework_form = "https://forms.gle/8SXRVwGs4q2MQHJD6"
         case "2024-11-12":
             slideshow_link = "https://docs.google.com/presentation/d/1LqK53V6loCTSSouDKSLi0ghzEUEeoyfh49JIIpD04OQ/edit?usp=sharing"
-            homework_form = "There is no homework this week."
+            homework_form = None
         case "2024-11-19" | "2024-11-26":
             slideshow_link = "https://docs.google.com/presentation/d/1l67FCwXIndPk7by-60jXrStApbmZtccyJQhMuFQl4-c/edit?usp=sharing"
-            homework_form = "There is no homework this week."
+            homework_form = None
         case _:
             slideshow_link = ""
             homework_form = ""
@@ -93,7 +93,7 @@ def returnHomeworksAndLectures(date: str):
         slideshow, homework_form = result
         return {
             "slideshow_link": slideshow,
-            "homework_form_link": homework_form or "There is no homework this week."
+            "homework_form_link": homework_form or None
         }
     else:
         return {"error": f"No data found for {closest_tuesday_str}. Choose a date between 9/24/2024 and 11/26/2024."}

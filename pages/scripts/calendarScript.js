@@ -29,7 +29,7 @@ async function getAssignments() {
                 : "No slideshow link available.";
             homeworkForm.innerHTML = data.homework_form_link
                 ? `<a href="${data.homework_form_link}" target="_blank">View Homework Form</a>`
-                : "No homework form available.";
+                : `<p> No homework form available.</p>`;
         }
     } catch (error) {
         console.error("Error fetching assignments:", error);
