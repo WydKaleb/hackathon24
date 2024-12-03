@@ -37,25 +37,23 @@ while start_date <= end_date:
             homework_form = "There is no homework this week."
         case "2024-10-01":
             slideshow_link = "https://docs.google.com/presentation/d/1wO047LhrT73QIcC5WzFhzGOtYhxap3aPq-nYbjmOSKk/edit?usp=sharing"
-            homework_form = "Homework Submit form: https://forms.gle/FtfsBKiXwcuTmXLw7"
+            homework_form = "https://forms.gle/FtfsBKiXwcuTmXLw7"
         case "2024-10-08":
             slideshow_link = "https://docs.google.com/presentation/d/1RWvO8TQ_ueJyBdSHfZ6oNvq9E6J3rYovItbX_Q-r-44/edit?usp=sharing"
-            homework_form = "Homework Submit form: https://forms.gle/3dnG8S4NUtckh5zD6"
+            homework_form = "https://forms.gle/3dnG8S4NUtckh5zD6"
         case "2024-10-15":
             slideshow_link = "https://docs.google.com/presentation/d/14ooPTPyM4QZPWMBq2sg4NypMQZAHQ4rY5n6CUn6l7zI/edit?usp=sharing"
-            homework_form = "Homework Submit form: https://forms.gle/BiJU8QxU1NA43k9d6"
+            homework_form = "https://forms.gle/BiJU8QxU1NA43k9d6"
         case "2024-10-22":
             slideshow_link = "https://docs.google.com/presentation/d/1YzEswdGs5zqZMaK8zPCaJl8PiiFFOYDnz2QVHLDAxak/edit?usp=sharing"
-            homework_form = """Homework Submit form: 
-                               React: https://forms.gle/LhLmh41u5ckfJdGL7
-                               JS Matching Game: https://forms.gle/SikXYsLiDJnQCgr28"""
+            homework_form = "https://forms.gle/LhLmh41u5ckfJdGL7"
+                               
         case "2024-10-29":
             slideshow_link = "https://docs.google.com/presentation/d/1GTiIFoT1EDLZ0Y9SC6G1f9c1-YZoMM-NMLOC8-0_-lI/edit?usp=sharing"
             homework_form = "Homework Submit form: https://forms.gle/8SXRVwGs4q2MQHJD6"
         case "2024-11-05":
             slideshow_link = "https://docs.google.com/presentation/d/15Na7t8cIfSIBrwDEqQ7BOuvSB5UykhBfiqQstg7lqsg/edit?usp=sharing"
-            homework_form = """Extended Twitter HW! Submit here: https://forms.gle/8SXRVwGs4q2MQHJD6
-                               Video to watch: https://youtu.be/fWjsdhR3z3c?si=tTJMWE6hhdmI0Vnk"""
+            homework_form = "https://forms.gle/8SXRVwGs4q2MQHJD6"
         case "2024-11-12":
             slideshow_link = "https://docs.google.com/presentation/d/1LqK53V6loCTSSouDKSLi0ghzEUEeoyfh49JIIpD04OQ/edit?usp=sharing"
             homework_form = "There is no homework this week."
