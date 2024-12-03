@@ -50,7 +50,7 @@ while start_date <= end_date:
                                
         case "2024-10-29":
             slideshow_link = "https://docs.google.com/presentation/d/1GTiIFoT1EDLZ0Y9SC6G1f9c1-YZoMM-NMLOC8-0_-lI/edit?usp=sharing"
-            homework_form = "Homework Submit form: https://forms.gle/8SXRVwGs4q2MQHJD6"
+            homework_form = "https://forms.gle/8SXRVwGs4q2MQHJD6"
         case "2024-11-05":
             slideshow_link = "https://docs.google.com/presentation/d/15Na7t8cIfSIBrwDEqQ7BOuvSB5UykhBfiqQstg7lqsg/edit?usp=sharing"
             homework_form = "https://forms.gle/8SXRVwGs4q2MQHJD6"
