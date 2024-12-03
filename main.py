@@ -85,6 +85,30 @@ con.commit()
 @app.get("/{date}")
 def returnHomeworksAndLectures(date: str):
     
-    #HERE RETURN THE RESPECTIVE HW ASSIGNMENT BASED ON THE PASSED IN DATE
-    return {"message": date}
+    # convert date string into something more manageable
+    try:
+        date_fmt = datetime.strptime(date, "%Y-%m-%d")
+    except ValueError:
+        return {"error": "Invalid date format. Please use YYYY-MM-DD."}
+
+    # find the closest previous tuesday (if the date is not a Tuesday)
+    days_to_tuesday = (date_fmt.weekday() - 1) % 7  # number of days back to the prev Tuesday
+    closest_tuesday = date_fmt - timedelta(days=days_to_tuesday)
+
+    # Convert back to formatted string in this YYYY-MM-DD format (aka the format we called stuff)
+    closest_tuesday_str = closest_tuesday.strftime("%Y-%m-%d")
+
+    # getting the homework and lec links from the closest (latest) tuesday
+    con = sqlite3.connect("bootcamp.db")
+    myCursor = con.cursor()
+    myCursor.execute("SELECT slideshow, homework_form FROM information WHERE date = ?", (closest_tuesday_str,))
+    
+    result = myCursor.fetchone()
+
+    if result:
+        slideshow, homework_form = result
+        #HERE RETURN THE RESPECTIVE HW ASSIGNMENT BASED ON THE PASSED IN DATE
+        return {"slideshow_link": slideshow, "homework_form_link": homework_form}
+    else:
+        return {"error": f"No data found for {closest_tuesday_str}. Choose a date between 9/24/2024 and 11/26/2024."}
 
