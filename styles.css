@@ -68,3 +68,9 @@ header a {
     color: #007bff;
     text-decoration: underline;
 }
+
+.attendance-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
